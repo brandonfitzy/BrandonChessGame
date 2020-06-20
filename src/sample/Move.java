@@ -5,10 +5,6 @@ public class Move {
     private Spot finishSpot;
     private Piece movePiece;
     private Piece killPiece;
-    
 
 
-    public Move(int x, int y, Spot spot){
-        this.x
-    }
 }
