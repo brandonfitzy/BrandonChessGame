@@ -1,27 +1,29 @@
 package sample;
 
 abstract class Piece {
-    private boolean killed;
-    private boolean white;
+    private boolean isKilled;
+    private boolean isWhite;
 
-    public Piece(){
-        this.white = true;
-        this.killed = false;
+    public Piece(boolean isWhite){
+        this.isWhite = isWhite;
+        this.isKilled = false;
     }
 
-    public void setKilled(boolean killed) {
-        this.killed = killed;
+    public abstract boolean canMove(Board board, Spot startSpot, Spot endSpot);
+
+    public void setKilled(boolean isKilled) {
+        this.isKilled = isKilled;
     }
 
-    public void setWhite(boolean white) {
-        this.white = white;
+    public void setWhite(boolean isWhite) {
+        this.isWhite = isWhite;
     }
 
     public boolean isKilled() {
-        return killed;
+        return isKilled;
     }
 
     public boolean isWhite() {
-        return white;
+        return isWhite;
     }
 }
